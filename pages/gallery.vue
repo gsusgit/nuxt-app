@@ -6,21 +6,21 @@
       <div class="grid gap-4">
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
+            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
+            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
+            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
             alt=""
           />
@@ -29,21 +29,21 @@
       <div class="grid gap-4">
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
+            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
+            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
+            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
             alt=""
           />
@@ -52,21 +52,21 @@
       <div class="grid gap-4">
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
+            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
+            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
+            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
             alt=""
           />
@@ -75,21 +75,21 @@
       <div class="grid gap-4">
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
+            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
+            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
+            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
             alt=""
           />

@@ -3,18 +3,15 @@
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
-      <router-link
-        to="/"
-        class="flex items-center space-x-3 rtl:space-x-reverse"
-      >
+      <NuxtLink to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="/img/logo.png" class="h-8" alt="Nuxt Logo" />
-      </router-link>
+      </NuxtLink>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
           class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white"
         >
           <li>
-            <router-link
+            <NuxtLink
               to="/"
               :class="[
                 'block py-2 px-3 md:p-0',
@@ -23,11 +20,11 @@
                   : 'text-gray-900 hover:text-green-700'
               ]"
               aria-current="page"
-              >Home</router-link
+              >Home</NuxtLink
             >
           </li>
           <li>
-            <router-link
+            <NuxtLink
               to="/about"
               :class="[
                 'block py-2 px-3 md:p-0',
@@ -35,19 +32,19 @@
                   ? 'text-green-700'
                   : 'text-gray-900 hover:text-green-700'
               ]"
-              >About</router-link
+              >About</NuxtLink
             >
           </li>
           <li>
-            <router-link
-              to="/gallery"
+            <NuxtLink
+              to="/products"
               :class="[
                 'block py-2 px-3 md:p-0',
-                $route.path === '/gallery'
+                $route.path === '/products'
                   ? 'text-green-700'
                   : 'text-gray-900 hover:text-green-700'
               ]"
-              >Gallery</router-link
+              >Products</NuxtLink
             >
           </li>
         </ul>

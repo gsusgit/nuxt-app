@@ -1,16 +1,16 @@
 <template>
   <section>
-    <h1 class="mb-4 text-4xl font-bold">Gallery</h1>
-    <p>This page will be displayed at the /gallery route.</p>
+    <h1 class="mb-4 text-4xl font-bold">Products</h1>
+    <p>This page will be displayed at the /products route.</p>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
       <div class="grid gap-4">
-        <router-link to="/products/1">
+        <NuxtLink to="/product/1">
           <img
             class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
             alt=""
           />
-        </router-link>
+        </NuxtLink>
         <div>
           <img
             class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"

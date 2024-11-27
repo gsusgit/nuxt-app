@@ -1,4 +1,5 @@
 <template>
+  <AppAlert />
   <div>
     <NuxtLayout>
       <main
@@ -9,3 +10,7 @@
     </NuxtLayout>
   </div>
 </template>
+
+<script setup>
+import AppAlert from '~/components/AppAlert.vue'
+</script>

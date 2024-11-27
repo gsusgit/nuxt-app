@@ -4,13 +4,13 @@
     <p>This page will be displayed at the /gallery route.</p>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
       <div class="grid gap-4">
-        <div>
+        <router-link to="/products/1">
           <img
             class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
             alt=""
           />
-        </div>
+        </router-link>
         <div>
           <img
             class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"

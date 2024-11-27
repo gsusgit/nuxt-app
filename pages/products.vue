@@ -98,3 +98,16 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+useHead({
+  title: 'My Nuxt App - Products',
+  meta: [
+    { name: 'description', content: 'Let us showcase of wonderful products.' }
+  ],
+  bodyAttrs: {
+    class: 'products-page'
+  },
+  script: [{ innerHTML: "console.log('Hello from products page')" }]
+})
+</script>

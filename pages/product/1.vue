@@ -1,12 +1,20 @@
 <template>
-  <div>
-    <h1 class="mb-4 text-4xl font-bold">Product 1</h1>
+  <Head>
+    <Title>{{ title }}</Title>
+    <Meta name="description" :content="`${title}: ${description}`" />
+    <Style
+      type="text/css"
+      children=".product-container { background-color: #ffffff; padding: 2rem; border-radius: 0.5rem; }"
+    ></Style>
+  </Head>
+  <div class="product-container">
+    <h1 class="mb-4 text-4xl font-bold">{{ title }}</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
     <div class="py-5">
       <img
         class="mx-auto rounded-lg h-96"
         src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-        alt="Product 1"
+        :alt="title"
       />
     </div>
     <div class="m-5 mx-auto">
@@ -33,3 +41,8 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const title = ref('Product 1')
+const description = ref('A fantastic product just for you!')
+</script>

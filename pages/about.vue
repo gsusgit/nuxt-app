@@ -17,7 +17,7 @@
       </AppAccordionItem>
       <AppAccordionItem title="Why Learn Nuxt?">
         <div class="bg-white shadow-md rounded-lg p-6">
-          <ul class="list-disc list-inside text-gray-600 space-y-2">
+          <ul class="list-inside text-gray-600 space-y-2">
             <li>Server-side rendering (SSR) for better SEO and performance</li>
             <li>Static site generation (SSG) for fast and secure websites</li>
             <li>Automatic code splitting for optimized loading</li>

@@ -1,14 +1,16 @@
 <template>
-  <div class="grid gap-4 bg-white rounded-lg shadow-sm p-4">
-    <img
-      class="h-auto max-w-full rounded-lg"
-      :src="product.thumbnail"
-      :alt="product.title" />
-    <h3>{{ product.title }}</h3>
-    <span class="font-bold text-green-600 text-lg">
-      {{ formatCurrency(product.price, '$') }}
-    </span>
-  </div>
+  <NuxtLink :to="`/product/${product.id}`">
+    <div class="grid gap-4 bg-white rounded-lg shadow-sm p-4">
+      <img
+        class="h-auto max-w-full rounded-lg"
+        :src="product.thumbnail"
+        :alt="product.title" />
+      <h3>{{ product.title }}</h3>
+      <span class="font-bold text-green-600 text-lg">
+        {{ formatCurrency(product.price, '$') }}
+      </span>
+    </div>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">

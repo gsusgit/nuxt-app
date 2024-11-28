@@ -9,5 +9,5 @@ export default defineNuxtConfig({
       title: 'My Nuxt App'
     }
   },
-  modules: ['@nuxtjs/tailwindcss']
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/test-utils']
 })

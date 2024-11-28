@@ -1,100 +1,37 @@
 <template>
-  <section>
+  <section class="mb-20">
     <h1 class="mb-4 text-4xl font-bold">Products</h1>
-    <p>This page will be displayed at the /products route.</p>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
-      <div class="grid gap-4">
-        <NuxtLink to="/product/1">
-          <img
-            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-            alt=""
-          />
-        </NuxtLink>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="grid gap-4">
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="grid gap-4">
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="grid gap-4">
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg scale-95 hover:scale-100 hover:ring-4 hover:ring-green-100 hover:ring-offset-1"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
-            alt=""
-          />
-        </div>
-      </div>
+    <p class="mb-12 text-xl">
+      This page shows products provided by a dummy
+      <strong>API</strong>
+    </p>
+    <div v-if="error">{{ error.message }}</div>
+    <div v-else-if="!products.length">Loading...</div>
+    <div v-else class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <ProductItem
+        v-for="product in products"
+        :key="product.id"
+        :product="product" />
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+
+interface Product {
+  id: number
+  title: string
+  thumbnail: string
+  price: number
+}
+
+const products = ref<Product[]>([])
+const { data, error } = useFetch('/api/products')
+
+onMounted(() => {
+  if (data.value) {
+    products.value = data.value.products
+  }
+})
+</script>

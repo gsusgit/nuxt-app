@@ -1,5 +1,3 @@
-import { ref } from 'vue'
-
 export const useAuth = () => {
   const userIsAuthenticated = ref(true)
 

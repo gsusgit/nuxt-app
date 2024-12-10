@@ -38,8 +38,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
 import useCurrency from '@/utils/currency'
 
 const route = useRoute()

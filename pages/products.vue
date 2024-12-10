@@ -22,7 +22,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
 import Filter from '../components/product/Filter.vue'
 
 interface Product {

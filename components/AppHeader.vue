@@ -82,9 +82,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useRoute } from 'vue-router'
-
 const $route = useRoute()
 const loading = ref(false)
 const loggedIn = ref(false)
@@ -105,6 +102,7 @@ const logOut = () => {
     loggedIn.value = false
   }, 1000)
   if (process.client) localStorage.setItem('loggedIn', false)
+  navigateTo('/')
 }
 
 onMounted(() => {

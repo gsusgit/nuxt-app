@@ -1,5 +1,3 @@
-import { reactive, computed } from 'vue'
-
 const state = reactive({
   title: '',
   message: '',

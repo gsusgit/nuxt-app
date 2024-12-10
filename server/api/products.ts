@@ -1,7 +1,7 @@
 import { defineEventHandler, getQuery } from 'h3'
 
 export default defineEventHandler(async (event) => {
-  const { id } = getQuery(event)
+  const { id, category } = getQuery(event)
 
   if (id) {
     const product = await fetch(`https://dummyjson.com/products/${id}`).then(
@@ -10,8 +10,22 @@ export default defineEventHandler(async (event) => {
     return { product }
   }
 
-  const products = await fetch('https://dummyjson.com/products').then((res) =>
-    res.json()
+  if (category) {
+    const productsByCategoryResponse = await fetch(
+      `https://dummyjson.com/products/category/${category}`
+    ).then((res) => res.json())
+    const productsByCategory = productsByCategoryResponse.products
+    return { products: productsByCategory }
+  }
+
+  const productsResponse = await fetch('https://dummyjson.com/products').then(
+    (res) => res.json()
   )
-  return products
+  const products = productsResponse.products
+
+  const categories = await fetch(
+    'https://dummyjson.com/products/categories'
+  ).then((res) => res.json())
+
+  return { products, categories }
 })

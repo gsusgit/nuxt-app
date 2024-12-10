@@ -19,11 +19,20 @@ import useCurrency from '@/utils/currency'
 const { formatCurrency } = useCurrency()
 
 defineProps({
-  product: Object as PropType<{
-    id: number
-    title: string
-    thumbnail: string
-    price: number
-  }>
+  product: {
+    type: Object as PropType<{
+      id: number
+      title: string
+      thumbnail: string
+      price: number
+    }>,
+    required: true,
+    default: () => ({
+      id: 0,
+      title: '',
+      thumbnail: '',
+      price: 0
+    })
+  }
 })
 </script>

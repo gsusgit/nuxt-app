@@ -43,8 +43,17 @@ import { useRoute } from 'vue-router'
 import useCurrency from '@/utils/currency'
 
 const route = useRoute()
-const product = ref(null)
-const { data, error } = useFetch(`/api/products?id=${route.params.id}`)
+
+interface Product {
+  title: string
+  thumbnail: string
+  price: number
+}
+
+const product = ref<Product | null>(null)
+const { data, error } = useFetch<{ product: Product }>(
+  `/api/products?id=${route.params.id}`
+)
 const { formatCurrency } = useCurrency()
 
 onMounted(() => {
